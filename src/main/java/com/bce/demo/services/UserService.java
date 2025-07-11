@@ -35,8 +35,9 @@ public List<User> deleteUserId(int userId) {
         userRepository.delete(user);
     }
 
-    public User updateUser(User user) {
-        return userRepository.saveAndFlush(user);
+    public List<User> updateUser(User user) {
+        userRepository.saveAndFlush(user);
+        return userRepository.findAll();
     }
 
 }

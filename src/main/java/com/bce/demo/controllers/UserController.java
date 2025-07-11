@@ -62,8 +62,8 @@ public class UserController {
 
     
     @PostMapping("/update")
-    public void updateUsers(@RequestBody User user){
-        userService.updateUser(user);
+    public List<User> updateUsers(@RequestBody User user){
+        return userService.updateUser(user);
     }
 
 }
