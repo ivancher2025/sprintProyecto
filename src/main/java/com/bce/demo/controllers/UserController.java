@@ -35,17 +35,10 @@ public class UserController {
         return userService.create(user);
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("buscar/{userId}")
    public User getUser(@PathVariable("userId") Integer userId){
       return userService.getUserById(userId);
    }
-
-
-   /* @GetMapping("/user/{userId}")
-   public UserDto getUserDto(@PathVariable("userId") Integer userId){
-    ModelMapper
-      return userService.getUserById(userId);
-   }*/
 
 
 
